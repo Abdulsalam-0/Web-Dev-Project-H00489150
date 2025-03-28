@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Smart Spend</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .totals {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+    }
+
+    .totals div {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    .edit-delete {
+      float: right;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Spend</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Exspense Tracker</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Smart Spend - Your Personal Expense Tracker</h2>
+      <h3>Balance: <span id="balance">0</span> USD</h3>
+
+      <div class="totals">
+        <div><strong>Total Income:</strong> <span id="totalIncome">0</span> USD</div>
+        <div><strong>Total Expenses:</strong> <span id="totalExpense">0</span> USD</div>
+      </div>
+
+      <div class="input-section">
+        <input type="text" id="description" placeholder="Enter description">
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button id="addTransaction">Add Transaction</button>
+      </div>
+
+      <h3>Transactions</h3>
+      <ul id="transactionList"></ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+
+  <footer>
+    <p>&copy; 2025 TrackIt. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
